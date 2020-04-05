@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesRegistro.css">
+    <link rel="shortcut icon" href="#" />
+    <title>Editar producto</title>
+</head>
+
+<body>
+    <script src="/hotelSPA/js/jquery-3.3.1.min.js"></script>
+    <script src="/hotelSPA/js/evaluarP.js"></script>
+    <script> function irMenu(){ window.location.href= "/hotelSPA/html/indexSesionAdministrador.html"  }</script>
+    <script>
+    function ValidarNumero(e, campo) 
+        {
+            ///key es una variable que recoge el valor ASCII de la tecla pulsada.
+            key = e.keyCode ? e.keyCode : e.which
+                /// Validamos la tecla backspace
+            if (key == 8) return true
+                /// Validamos las teclas del 0 al 9
+            if (key > 47 && key < 58) {
+                if (campo.value == "") return true
+                regexp = /,[0-9]{2}$/
+            return !(regexp.test(campo.value))
+            }
+                /// Validamos la tecla "."
+            if (key == 46) {
+            if (campo.value == "") return true;
+            regexp = /^-*[0-9]+$/
+            return regexp.test(campo.value);
+            }
+                ///En caso de que se presione cualquier otra tecla el valor no se introduce.
+            return false
+        }
+    </script>
+    
+    <div class="container" id="advanced-search-form">
+        <h2>Agregar un Servicio</h2>
+        <form method="post" id="registerForm" name="registerForm">
+            <div>
+            <br/>
+            <h4>Información del servicio:</h4>
+           
+            <div class="form-group">
+                <label for="last-name">Id Servicio </label>
+                <input type="text" class="form-control" placeholder="Id Servicio" id="idServicio" onkeypress="return ValidarNumero(event,this)" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Nombre Servicio </label>
+                <input type="text" class="form-control" placeholder="Nombre servicio" id="nombreServicio" value="" maxlength="20" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Horario Servicio </label>
+                <input type="text" class="form-control" placeholder="Horario servicio" id="horarioServicio" value="00:00 - 00:00" maxlength="15" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Costo Servicio </label>
+                <input type="text" class="form-control" placeholder="Costo Servicio" id="costoServicio" onkeypress="return ValidarNumero(event,this)" maxlength="10" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Capacidad de Servicio</label>
+                <input type="number" class="form-control" placeholder="Capacidad " id="capacidadServicio" min="0" required>
+            </div>
+            <!--     
+            <div class="form-group">
+                <label for="last-name">Color </label>
+                <datalist id="listaP">
+                    <option value="Amarillo"></option>
+                    <option value="Purpura"></option>
+                    <option value="Verde"></option>
+                    <option value="Blanco"></option>
+                    <option value="Cafe"></option>
+                    <option value="Azul"></option>
+                    <option value="Negro"></option> 
+                    <option value="Rojo"></option>
+                    <option value="Naranja"></option>    
+                </datalist>
+                <input list="listaP" type="text" class="form-control" placeholder="Color" id="nombreP" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Precio </label>
+                <input type="text" class="form-control" placeholder="Precio" id="precioP" onkeypress="return ValidarNumero(event,this)" required>
+            </div>
+                 <div class="form-group">
+                <label for="last-name">Peluches disponibles</label>
+                <input type="number" class="form-control" placeholder="Peluches disponibles" id="stockP" min="0" maxlength="10" required>
+            </div>
+                 <div class="form-group">
+                <label for="last-name">Descripción </label>
+                <input type="text" class="form-control" placeholder="Descripción" id="desP" value="Ancho  m X Altura  m" required>
+            </div>
+                 
+                 <div class="form-group">
+                <label for="last-name">Ruta de Imagen </label>
+                <input type="text" class="form-control" placeholder="Ruta de Imagen" id="rutaP" required>
+            </div>
+            -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <input type="file" name="upload" class="btn btn-info btn-lg btn-responsive" id="real-file"  hidden="hidden" > 
+            <br />
+            <img width="25" alt="Imagen"  class="btn btn-success btn-lg" />
+            
+            <div class="clearfix">
+                    <input  type="button" id="botoncargar" value="Cargar producto" class="btn btn-success btn-lg" />
+            </div>
+                 
+            <div class="clearfix">
+                    <input  type="button" id="botonmenu" onclick="irMenu()" value="Cancelar" class="btn btn-info btn-lg btn-responsive" />
+            </div>
+            </div>
+               
+            </div>
+    
+           
+          
+            <div class="clearfix"></div>
+                        
+      
+    
+</body>
+</html>
