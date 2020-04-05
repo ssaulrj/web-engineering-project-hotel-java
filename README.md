@@ -13,4 +13,4 @@ Project tables:
   *TABLE CARRITO*
   
   Login: 
- ![Login interface](/home/ssaulrj/Imágenes/login0.png)
+ ![Login interface](https://github.com/ssaulrj/web-engineering-project-hotel-java/blob/master/web/login0.png)
