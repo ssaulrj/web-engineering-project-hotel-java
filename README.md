@@ -3,7 +3,7 @@
 Project about a SPA Hotel page: Java feat Mysql/Sql
 
 Project tables: 
-  *TABLE PRODUCTO*
+  *TABLE PRODUCTO* /n
   *TABLE ADMINISTRADOR*
   *TABLE SUCURSAL*
   *TABLE CLIENTE*
@@ -11,3 +11,6 @@ Project tables:
   *TABLE VENTAS*
   *TABLE COMPRAS*
   *TABLE CARRITO*
+  
+  Login: 
+ ![Login interface](/home/ssaulrj/Imágenes/login0.png)
